@@ -1,16 +1,18 @@
+
 import React from 'react'
 function Header() {
   return (
-    <div className='relative bg-linear-to-b from-[#061212] to-[#0E2E2E] p-10 h-[100vh]'>
+    <div className='relative bg-linear-to-b from-[#061212] to-[#0E2E2E] p-10 h-full'>
         <Navigation/>
         <HeroSection/>
+        <SocialProof/>
     </div>
   )
 }
 
 const Navigation = ()=>{
     return(<>
-        <div className="flex p-5  text-white pt-2 px-10 justify-between items-center  gap-5 ">
+        <div className="flex p-5 z-1  text-white pt-2 px-10 justify-between items-center  gap-5 ">
             <div className='logo flex gap-3'>
             <img src="/Images/Icon.png" alt="" />
             <p>NoteFlow</p>
@@ -51,5 +53,17 @@ Organize and Summarize in Seconds
     </div>
     </div>)
 }
+
+const SocialProof = ()=>{
+    return(<div className='flex gap-5 px-10 -mt-5'>
+        <div className="headshots ">
+            <img className='w-25' src="/Images/Headshots.png" alt="Headshots" />
+        </div>
+        <div className="info text-white ">
+            Trusted by <span className='text-[#44E5E7] font-bold'>12,653</span> productivity junkies
+        </div>
+    </div>)
+}
+
 
 export default Header
