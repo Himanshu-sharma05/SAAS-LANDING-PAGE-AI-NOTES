@@ -1,5 +1,5 @@
 import { div } from 'framer-motion/client'
-import React from 'react'
+import React, { useState } from 'react'
 
 function FAQs() {
   return (
@@ -34,7 +34,18 @@ const Button1 = ({text})=>{
 }
 
 const Question = ({question,icon,answer})=>{
-
+    const [closed,setClosed] = useState(true);
+    const handleAnswer = ()=>{
+        const answer = document.querySelector(".answer");
+        if(closed){
+            answer.classList.remove("max-h-0");
+            setClosed(false)
+        }else{
+            answer.classList.add("max-h-0");
+            setClosed(true);
+        }
+        
+    }
     return(<div>
     <div onClick={handleAnswer} className='flex justify-between w-full px-60 items-center hover:cursor-pointer'>
         <div className='flex gap-5 items-center'>
@@ -42,13 +53,19 @@ const Question = ({question,icon,answer})=>{
             <div className='text-xl font-semibold font-Poppins'>{question}</div>
         </div>
         <div className="arrow-icon">
-        <svg width="48" height="46" viewBox="0 0 48 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {closed? <svg className='arrow-down' width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M31.0601 21.0801L24.0001 28.1201L16.9401 21.0801" stroke="#ECFCFD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> : <svg className='arrowup' width="48" height="46" viewBox="0 0 48 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M16.9399 25.7287L23.9999 19.1489L31.0599 25.7287" stroke="#ECFCFD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+</svg>}
+        
+
+
+
 
         </div>
     </div>
-    <div className="answer overflow-hidden max-h-0 transition duration-500 ease-in-out px-80 mt-5">
+    <div className="answer max-h-0 overflow-hidden transition duration-2000 ease-in-out px-80 mt-5">
         {answer}
     </div>
     </div>)
