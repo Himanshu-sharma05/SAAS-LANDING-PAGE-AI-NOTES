@@ -10,7 +10,7 @@ function FAQs() {
         <p>The most commonly asked questions about NoteFlow.</p>
         <p>Have any other questions? Chat with our expert tech team</p>
         </div>
-        <div className='flex gap-3 mt-8 mx-90'>
+        <div className='flex gap-3 mt-8 mx-110'>
             <Button1 text={"General"} />
             <Button1 text={"Pricing"} />
             <Button1 text={"Features"} />
