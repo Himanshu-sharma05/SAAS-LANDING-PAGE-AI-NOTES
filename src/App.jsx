@@ -5,6 +5,7 @@ import Features from './components/Features'
 import FAQs from './components/FAQs'
 import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
+import Overlay from './components/Overlay'
 function App() {
   return (
     <div className='bg-black'>
@@ -14,6 +15,7 @@ function App() {
       <FAQs/>
       <Testimonials/>
       <Footer/>
+      <Overlay/>
     </div>
   )
 }
