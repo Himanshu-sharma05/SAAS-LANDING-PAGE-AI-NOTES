@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 function Header() {
   return (
-    <div className='relative bg-linear-to-b from-[#061212] to-[#0E2E2E] p-10 h-full'>
+    <div className='relative bg-linear-to-b from-[#061212] to-[#0E2E2E] p-5 pt-10 md:p-10 h-full'>
         <Navigation/>
         <HeroSection/>
         <SocialProof/>
@@ -46,32 +46,32 @@ const Navigation = ()=>{
 }
 
 const HeroSection = ()=>{
-    return(<div className='mt-20 p-10 flex justify-between'>
+    return(<div className='mt-20 md:p-10 p-5 flex flex-col md:flex-row justify-between'>
     
-    <div className="left text-white w-[50.14vw] ">
-        <div className="heading font-[Poppins] font-semibold leading-[75px] tracking-tighter text-[60px] font-weight-600">
+    <div className="left text-white lg:w-[50.14vw] ">
+        <div className="heading mt-15 md:mt-0 font-[Poppins] font-semibold leading-[50px] md:leading-[75px] tracking-tighter text-[45px] md:text-[60px] font-weight-600">
         AI-Powered Notes.
 Organize and Summarize in Seconds
 
         </div>
-        <div className="para mt-3 leading-[40px] font-thin">
+        <div className="para mt-5 md:mt-3 leading-[30px] md:leading-[40px] font-thin">
         Let AI organize & summarize your notes, <br/>
         saving you time and boosting productivity
         </div>
-        <button className='mt-3 -ml-2 p-3 shadow-lg shadow-[#0E2E2E] px-6 bg-[#44E5E7] text-black rounded-3xl'>Get Started</button>
+        <button className='mt-5 md:mt-3 -ml-2 p-3 shadow-lg shadow-[#0E2E2E] px-6 bg-[#44E5E7] text-black rounded-3xl'>Get Started</button>
     </div>
-    <div className="right w-[400px]  h-[480px]">
+    <div className="right w-[320px] mt-5 md:mt-0 md:w-[400px]  md:h-[480px]">
         <img src="/Images/Hero Graphic.png" alt="" />
     </div>
     </div>)
 }
 
 const SocialProof = ()=>{
-    return(<div className='flex gap-5 px-10 -mt-5'>
+    return(<div className='flex flex-col md:flex-row gap-5 px-10 -mt-5'>
         <div className="headshots ">
-            <img className='w-25' src="/Images/Headshots.png" alt="Headshots" />
+            <img className='md:w-25 w-35 mt-9 md:mt-0' src="/Images/Headshots.png" alt="Headshots" />
         </div>
-        <div className="info text-white ">
+        <div className="info text-white">
             Trusted by <span className='text-[#44E5E7] font-bold'>12,653</span> productivity junkies
         </div>
     </div>)

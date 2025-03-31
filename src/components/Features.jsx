@@ -2,8 +2,8 @@ import React from 'react'
 
 const Features = () => {
   return (
-    <div className='text-white pt-30 pb-30 bg-[#061212] px-20'>
-        <div className="heading text-center text-[8.5vh] tracking-tight font-[Poppins] font-semibold mb-[128px]">
+    <div className='text-white  pt-30 pb-30 bg-[#061212] px-5 md:px-20'>
+        <div className="heading text-center text-[45px] md:text-[8.5vh] tracking-tight font-[Poppins] font-semibold mb-[128px]">
             <div className="line1">
                 All The Tools You Need To
             </div>
@@ -16,8 +16,8 @@ const Features = () => {
 }
 
 const Feature = ({title,para,url,flexdir})=>{
-    return(<div style={{flexDirection:flexdir}} className='flex items-center gap-30 mb-20'>
-        <img className='w-[618px] h-[718px]' src={url} alt="Images" />
+    return(<div style={{flexDirection:flexdir}} className='flex flex-col md:flex-row md:items-center gap-30 mb-20'>
+        <img className='w-[320px] md:w-[618px] md:h-[718px]' src={url} alt="Images" />
         <div className="featuretext flex flex-col gap-7">
             <div className="title text-5xl font-[Poppins] font-semibold ">
                 {title}

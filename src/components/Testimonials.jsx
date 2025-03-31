@@ -3,7 +3,7 @@ import { div } from 'framer-motion/m';
 import React, { useState } from 'react'
 
 const Testimonials = () => {
-    const [opened,setOpened] = useState(true);
+    const [opened,setOpened] = useState(false);
     const toggleTestimonials = ()=>{
         setOpened((prev)=> !prev)
     }
