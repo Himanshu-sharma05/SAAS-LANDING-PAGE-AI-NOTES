@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 function FAQs() {
   return (
-    <div className='h-[100vh] flex flex-col justify-center px-20 text-white bg-linear-to-b from-[#061212] to-[#0E2E2E]'>
+    <div className='h-full flex flex-col justify-center px-20 text-white bg-linear-to-b from-[#061212] to-[#0E2E2E] pb-30'>
         <div className="heading text-center text-[8.5vh] tracking-tight font-[Poppins] font-semibold">
             Frequently Asked Questions
         </div>
@@ -19,8 +19,12 @@ function FAQs() {
 
         </div>
 
-        <div className='mx-auto px-5 w-full'>
-            <Question question={"What is noteflow?"} icon={"/Images/Note.png"} answer={"NoteFlow is an AI-powered note-taking application designed to help individuals and teams organize, manage, and retrieve notes effortlessly."} />
+        <div className='mx-auto flex gap-5 flex-col px-5 w-full h-full'>
+            <Question question={"What is noteflow?"} index={1} icon={"/Images/Note.png"} answer={"NoteFlow is an AI-powered note-taking application designed to help individuals and teams organize, manage, and retrieve notes effortlessly."} />
+            <Question question={"How does NoteFlow use AI to enhance note-taking?"} index={2} icon={"/Images/magicicon.png"} answer={"NoteFlow is an AI-powered note-taking application designed to help individuals and teams organize, manage, and retrieve notes effortlessly."} />
+            <Question question={"Can NoteFlow be used for team collaboration?"} index={3} icon={"/Images/Socialicon.png"} answer={"NoteFlow is an AI-powered note-taking application designed to help individuals and teams organize, manage, and retrieve notes effortlessly."} />
+            <Question question={"Can I access NoteFlow on multiple devices?"} index={4} icon={"/Images/cloudicon.png"} answer={"NoteFlow is an AI-powered note-taking application designed to help individuals and teams organize, manage, and retrieve notes effortlessly."} />
+            <Question question={"Is my data secure with NoteFlow?"} index={5} icon={"/Images/secureicon.png"} answer={"NoteFlow is an AI-powered note-taking application designed to help individuals and teams organize, manage, and retrieve notes effortlessly."} />
         </div>
 
     </div>
@@ -33,10 +37,10 @@ const Button1 = ({text})=>{
     </div>)
 }
 
-const Question = ({question,icon,answer})=>{
+const Question = ({question,icon,answer,index})=>{
     const [closed,setClosed] = useState(true);
     const handleAnswer = ()=>{
-        const answer = document.querySelector(".answer");
+        const answer = document.querySelector(`.answer${index}`);
         if(closed){
             answer.classList.remove("max-h-0");
             setClosed(false)
@@ -65,7 +69,7 @@ const Question = ({question,icon,answer})=>{
 
         </div>
     </div>
-    <div className="answer max-h-0 overflow-hidden transition duration-2000 ease-in-out px-80 mt-5">
+    <div className = {"text-gray-300 max-h-0 overflow-hidden transition-all duration-2000 ease-in-out px-80 mt-5 " + `${" answer"+ index}`}  >
         {answer}
     </div>
     </div>)
