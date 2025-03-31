@@ -4,6 +4,7 @@ import Logo from './components/Logo'
 import Features from './components/Features'
 import FAQs from './components/FAQs'
 import Testimonials from './components/Testimonials'
+import Footer from './components/Footer'
 function App() {
   return (
     <div className='bg-black'>
@@ -12,6 +13,7 @@ function App() {
       <Features/>
       <FAQs/>
       <Testimonials/>
+      <Footer/>
     </div>
   )
 }
