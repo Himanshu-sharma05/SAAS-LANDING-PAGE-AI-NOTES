@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='h-[50vh] flex justify-between text-white bg-gradient-to-b to-[#0E2E2E]  from-[#061212] px-20 '>
+    <div className='h-full flex md:flex-row flex-col justify-between text-white bg-gradient-to-b to-[#0E2E2E]  from-[#061212] pb-20 px-5 md:px-20 '>
         <div>
         <div className='logo flex gap-3 text-white font-[Poppins] font-bold text-[24px]'>
             <img src="/Images/Icon.png" alt="" />
@@ -10,9 +10,11 @@ const Footer = () => {
         </div>
         </div>
 
-        <div className="right-nav flex gap-25">
+        <div className="right-nav  pl-5 md:pl-0 flex mt-20 md:mt-0 md:flex-row flex-col  gap-25">
+
+            <div className='flex gap-25'>
             <div className="first">
-                <div className="heading font-[Poppins] font-semibold text-xl">
+                <div className="heading font-[Poppins] font-semibold text-2xl md:text-xl">
                     Home
                 </div>
                 <div className='flex mt-7 flex-col gap-5 font-light text-xl text-gray-200'>
@@ -22,8 +24,8 @@ const Footer = () => {
                 <a href="">Testimonials</a>
                 </div>
             </div>
-            <div className="first">
-                <div className="heading font-[Poppins] font-semibold text-xl">
+            <div className="second">
+                <div className="heading font-[Poppins] font-semibold text-2xl md:text-xl">
                     Pricing
                 </div>
                 <div className='flex mt-7 flex-col gap-5 font-light text-xl text-gray-200'>
@@ -33,8 +35,11 @@ const Footer = () => {
                 <a href="">Refunds</a>
                 </div>
             </div>
-            <div className="first">
-                <div className="heading font-[Poppins] font-semibold text-xl">
+            </div>
+
+            <div className='flex gap-25'>
+            <div className="third">
+                <div className="heading font-[Poppins] font-semibold text-2xl md:text-xl">
                     About
                 </div>
                 <div className='flex mt-7 flex-col gap-5 font-light text-xl text-gray-200'>
@@ -44,8 +49,8 @@ const Footer = () => {
                 <a href="">Policy</a>
                 </div>
             </div>
-            <div className="first">
-                <div className="heading font-[Poppins] font-semibold text-xl">
+            <div className="forth">
+                <div className="heading font-[Poppins] font-semibold text-2xl md:text-xl">
                     Community
                 </div>
                 <div className='flex mt-7 flex-col gap-5 font-light text-xl text-gray-200'>
@@ -54,6 +59,7 @@ const Footer = () => {
                 <a href="">Blog</a>
                 <a href="">Support</a>
                 </div>
+            </div>
             </div>
         </div>
     </div>
