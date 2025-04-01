@@ -69,7 +69,7 @@ const Question = ({question,icon,answer,index})=>{
 
         </div>
     </div>
-    <div className = {"text-gray-300 max-h-0 overflow-hidden transition-all duration-2000 ease-in-out md:px-80 mt-5 " + `${" answer"+ index}`}  >
+    <div className = {"text-gray-300 max-h-0 overflow-hidden  md:px-80 mt-5 " + `${" answer"+ index}`}  >
         {answer}
     </div>
     </div>)
