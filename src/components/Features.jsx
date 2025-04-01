@@ -16,10 +16,10 @@ const Features = () => {
 }
 
 const Feature = ({title,para,url,flexdir})=>{
-    return(<div style={{flexDirection:flexdir}} className='flex flex-col md:flex-row md:items-center gap-30 mb-20'>
+    return(<div className= {'flex '+ 'md:flex-'+`${flexdir}` + 'md:items-center flex-col-reverse gap-15 md:gap-30 mb-20'}>
         <img className='w-[320px] md:w-[618px] md:h-[718px]' src={url} alt="Images" />
         <div className="featuretext flex flex-col gap-7">
-            <div className="title text-5xl font-[Poppins] font-semibold ">
+            <div className="title text-3xl md:text-5xl font-[Poppins] font-semibold ">
                 {title}
             </div>
             <div className="para max-w-[90%] text-left text-xl leading-[40px] font-light">
