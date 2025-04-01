@@ -8,19 +8,19 @@ const Testimonials = () => {
         setOpened((prev)=> !prev)
     }
   return (
-    <div className='h-full overflow-x-hidden pb-40 flex flex-col items-center gap-10 pt-40  text-white bg-gradient-to-b to-[#061212] from-[#0E2E2E]'>
+    <div className='h-full overflow-x-hidden pb-40 flex flex-col items-center gap-10 md:pt-40  text-white bg-gradient-to-b to-[#061212] from-[#0E2E2E]'>
          <button className='p-3 shadow-lg shadow-[#0E2E2E] w-fit px-6 bg-[#44E5E7] text-black rounded-3xl'>Testimonials</button>
-         <div className="heading text-center text-[8.5vh] leading-[80px] tracking-tight font-[Poppins] font-semibold">
+         <div className="heading text-center text-4xl md:text-[8.5vh] md:leading-[80px] tracking-tight font-[Poppins] font-semibold">
          What our AI-powered<br/> notetakers have to say
                  </div>
 
-                 <div className="subheading text-center text-xl font-light leading-[30px] mt-3">
+                 <div className="subheading text-center text-xl font-light leading-[30px] md:mt-3">
                  <p>NoteFlow has helped 1000’s supercharge their productivity </p>
                  <p>with cutting edge AI note taking tools</p>
                  </div>
 
-           <div className="testimonial-cards mt-15 flex gap-7 px-20 ">
-                <div className="left-layer flex flex-col gap-7 ">
+           <div className="testimonial-cards mt-15 flex gap-7 md:px-20 ">
+                <div className="hidden left-layer md:flex md:flex-col gap-7 ">
                     <Testimonial text={"NoteFlow has completely transformed the way I manage my work notes. The AI-powered organization feature makes it so easy to find what I need, even weeks after the fact."} name={"Emily Thompson"} position={"senior marketing manager"} profileimg={"/Images/profiles/Emily.png"} rating={5} />
                     <Testimonial text={"The smart organization of my notes is impressive. I used to waste time searching for information, but now NoteFlow does the heavy lifting."} name={"Jonathan Moore"} position={"Software Engineer"} profileimg={"/Images/profiles/Jonathan.png"} rating={4} />
                     {opened ? <Testimonial text={"The AI-driven categorization helps me keep my content ideas organized and searchable, saving me hours every week. Highly recommended!"} name={"Olivia Carter"} position={"Content Strategist"} profileimg={"/Images/profiles/Olivia.png"} rating={5} />
@@ -44,7 +44,7 @@ const Testimonials = () => {
                     
 
                 </div>
-                <div className="right-layer flex flex-col gap-7 ">
+                <div className="hidden right-layer md:flex md:flex-col gap-7 ">
                     <Testimonial text={"I love how NoteFlow integrates with tools like Google Drive and Slack. It makes collaboration with my team so much smoother. The contextual reminders have helped me stay on top of critical deadlines."} name={"Sarah lee"}  position={"Buisness Analyst"} profileimg={"/Images/profiles/Sarah.png"} rating={5} />
                     <Testimonial text={"As a startup founder, my days are packed with meetings and ideas. NoteFlow’s voice-to-text feature lets me capture thoughts while I’m on the move."} name={"Daniel Harris"} position={"Entrepreneur"} profileimg={"/Images/profiles/Daniel.png"} rating={4} />
                     {opened ? <Testimonial text={"I rely heavily on my notes during client calls and follow-ups. The ability to automatically receive reminders based on my notes has made my follow-up process much smoother and more efficient."} name={"Jessica Gonzalez"} position={"Sales Executive"} profileimg={"/Images/profiles/Jessica.png"} rating={4} />
@@ -74,7 +74,7 @@ const Testimonials = () => {
 }
 
 const Testimonial = ({text,profileimg,name,position,rating})=>{
-    return(<div className='w-[28vw] h-fit p-7 px-10 pb-10 flex flex-col bg-[#0E2E2E] rounded-3xl'>
+    return(<div className='md:w-[28vw] h-fit p-7 px-10 pb-10 flex flex-col bg-[#0E2E2E] rounded-3xl'>
         <div className="top">
             <div className="stars mt-4 mb-4">
             <Rating rating={rating}/>
