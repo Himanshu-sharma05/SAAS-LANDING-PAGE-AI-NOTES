@@ -3,15 +3,15 @@ import React, { useState } from 'react'
 
 function FAQs() {
   return (
-    <div className='h-full flex flex-col justify-center px-20 text-white bg-linear-to-b from-[#061212] to-[#0E2E2E] pb-30'>
-        <div className="heading text-center text-[8.5vh] tracking-tight font-[Poppins] font-semibold">
+    <div className='h-full flex flex-col justify-center px-5 md:px-20 text-white bg-linear-to-b from-[#061212] to-[#0E2E2E] pb-30'>
+        <div className="heading  md:text-center text-4xl md:text-[8.5vh] tracking-tight font-[Poppins] font-semibold">
             Frequently Asked Questions
         </div>
-        <div className="subheading text-center text-xl leading-[40px] mt-6">
+        <div className="subheading md:text-center text-lg md:text-xl leading-[40px] mt-6">
         <p>The most commonly asked questions about NoteFlow.</p>
         <p>Have any other questions? Chat with our expert tech team</p>
         </div>
-        <div className='flex gap-3 mt-8 mx-110 mb-30'>
+        <div className='hidden md:flex md:flex-row gap-3 md:mt-8 md:mx-110 mb-30'>
             <Button1 text={"General"} />
             <Button1 text={"Pricing"} />
             <Button1 text={"Features"} />
@@ -19,7 +19,7 @@ function FAQs() {
 
         </div>
 
-        <div className='mx-auto flex gap-5 flex-col px-5 w-full h-full'>
+        <div className='mx-auto mt-10 md:mt-0 flex gap-5 flex-col px-5 w-full h-full'>
             <Question question={"What is noteflow?"} index={1} icon={"/Images/Note.png"} answer={"NoteFlow is an AI-powered note-taking application designed to help individuals and teams organize, manage, and retrieve notes effortlessly."} />
             <Question question={"How does NoteFlow use AI to enhance note-taking?"} index={2} icon={"/Images/magicicon.png"} answer={"NoteFlow is an AI-powered note-taking application designed to help individuals and teams organize, manage, and retrieve notes effortlessly."} />
             <Question question={"Can NoteFlow be used for team collaboration?"} index={3} icon={"/Images/Socialicon.png"} answer={"NoteFlow is an AI-powered note-taking application designed to help individuals and teams organize, manage, and retrieve notes effortlessly."} />
@@ -51,7 +51,7 @@ const Question = ({question,icon,answer,index})=>{
         
     }
     return(<div>
-    <div onClick={handleAnswer} className='flex justify-between w-full px-60 items-center hover:cursor-pointer'>
+    <div onClick={handleAnswer} className='flex justify-between md:w-full md:px-60 items-center hover:cursor-pointer'>
         <div className='flex gap-5 items-center'>
             <img src = {icon} alt="" />
             <div className='text-xl font-semibold font-Poppins'>{question}</div>
@@ -69,7 +69,7 @@ const Question = ({question,icon,answer,index})=>{
 
         </div>
     </div>
-    <div className = {"text-gray-300 max-h-0 overflow-hidden transition-all duration-2000 ease-in-out px-80 mt-5 " + `${" answer"+ index}`}  >
+    <div className = {"text-gray-300 max-h-0 overflow-hidden transition-all duration-2000 ease-in-out md:px-80 mt-5 " + `${" answer"+ index}`}  >
         {answer}
     </div>
     </div>)
