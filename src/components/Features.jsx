@@ -16,7 +16,7 @@ const Features = () => {
 }
 
 const Feature = ({title,para,url,flexdir})=>{
-    return(<div className= {'flex '+ 'md:flex-'+`${flexdir}` + 'md:items-center flex-col-reverse gap-15 md:gap-30 mb-20'}>
+    return(<div className= {'flex md:flex-row '+ 'md:flex-'+`${flexdir}` + ' flex-col-reverse md:items-center gap-15 md:gap-30 mb-20'}>
         <img className='w-[320px] md:w-[618px] md:h-[718px]' src={url} alt="Images" />
         <div className="featuretext flex flex-col gap-7">
             <div className="title text-3xl md:text-5xl font-[Poppins] font-semibold ">
