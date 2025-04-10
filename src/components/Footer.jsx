@@ -10,7 +10,7 @@ const Footer = () => {
         </div>
         </div>
 
-        <div className="right-nav  pl-5 md:pl-0 flex mt-20 md:mt-0 md:flex-row flex-col  gap-25">
+        <div className="right-nav  md:pl-0 flex mt-20 md:mt-0 md:flex-row flex-col  gap-25">
 
             <div className='flex gap-25'>
             <div className="first">

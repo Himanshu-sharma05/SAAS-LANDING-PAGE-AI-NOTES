@@ -15,7 +15,7 @@ const Navigation = ()=>{
         document.querySelector(".overlay").classList.remove("hidden");
     }
     return(<>
-        <div className="flex p-5 z-1  text-white pt-2 px-5 lg:px-10 justify-between items-center  gap-5 ">
+        <div className="flex p-5 z-1  text-white pt-2 px-2 lg:px-10 justify-between items-center  gap-5 ">
             <div className='logo flex gap-3'>
             <img src="/Images/Icon.png" alt="" />
             <p className='text-2xl font-bold'>NoteFlow</p>
@@ -29,8 +29,8 @@ const Navigation = ()=>{
             </div>
 
             <div className='hidden buttons lg:flex gap-2'>
-                <button onClick={handleOverlay} className='p-3 px-6 bg-black border-2 border-white text-white rounded-3xl'>Login</button>
-                <button className='p-3 shadow-lg shadow-[#0E2E2E] px-6 bg-[#44E5E7] text-black rounded-3xl'>Get Started</button>
+                <button onClick={handleOverlay} className='p-3 cursor-pointer px-6 bg-black border-2 border-white text-white rounded-3xl'>Login</button>
+                <button onClick={handleOverlay} className='p-3 cursor-pointer shadow-lg shadow-[#0E2E2E] px-6 bg-[#44E5E7] text-black rounded-3xl'>Get Started</button>
             </div>
             <div className='lg:hidden cursor-pointer'>
             <svg width="34" height="34" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@ const Navigation = ()=>{
 }
 
 const HeroSection = ()=>{
-    return(<div className='mt-20 md:p-10 p-5 flex flex-col md:flex-row justify-between'>
+    return(<div className='mt-20 md:p-10 p-2 flex flex-col md:flex-row justify-between'>
     
     <div className="left text-white lg:w-[50.14vw] ">
         <div className="heading mt-15 md:mt-0 font-[Poppins] font-semibold leading-[50px] md:leading-[75px] tracking-tighter text-[45px] md:text-[60px] font-weight-600">
@@ -58,7 +58,7 @@ Organize and Summarize in Seconds
         Let AI organize & summarize your notes, <br/>
         saving you time and boosting productivity
         </div>
-        <button className='mt-5 md:mt-3 -ml-2 p-3 shadow-lg shadow-[#0E2E2E] px-6 bg-[#44E5E7] text-black rounded-3xl'>Get Started</button>
+        <button className='mt-5 md:mt-3 mb-7 md:mb-0 -ml-2 p-3 shadow-lg shadow-[#0E2E2E] px-6 bg-[#44E5E7] text-black rounded-3xl'>Get Started</button>
     </div>
     <div className="right w-[320px] mt-5 md:mt-0 md:w-[400px]  md:h-[480px]">
         <img src="/Images/Hero Graphic.png" alt="" />
@@ -67,7 +67,7 @@ Organize and Summarize in Seconds
 }
 
 const SocialProof = ()=>{
-    return(<div className='flex flex-col md:flex-row gap-5 px-10 -mt-5'>
+    return(<div className='flex flex-col md:flex-row gap-5 px-5 md:px-10 mt-5 md:-mt-5'>
         <div className="headshots ">
             <img className='md:w-25 w-35 mt-9 md:mt-0' src="/Images/Headshots.png" alt="Headshots" />
         </div>
